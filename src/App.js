@@ -7,19 +7,21 @@ import { Weather } from './components/Weather'
 
 const API_KEY= 'd6d091ab1a32a6e22f178d8cbc1f5401'
 
+const initialState = {
+  city: undefined,
+  country: undefined,
+  weather:{
+    temperature: undefined,
+    humidity: undefined,
+    windspeed: undefined,
+    description: undefined,
+  },
+  error: undefined
+}
+
 class App extends Component {
 
-  state = {
-    city: undefined,
-    country: undefined,
-    weather:{
-      temperature: undefined,
-      humidity: undefined,
-      windspeed: undefined,
-      description: undefined,
-    },
-    error: undefined
-  }
+  state =  initialState
 
   getWeather = async (event) => {
     event.preventDefault()
@@ -30,36 +32,34 @@ class App extends Component {
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&unit=metric`)
     
       const data = await api_call.json()
-  
-      this.setState({
-        city:data.name,
-        country:data.sys.country,
-        weather:{
-          temperature: data.main.temp,
-          humidity: data.main.humidity,
-          windspeed: data.wind.speed,
-          description: data.weather[0].description,
-        },
-        error:''
-      })
+      if(data.cod !== '404') {
+        this.setState({
+          city:data.name,
+          country:data.sys.country,
+          weather:{
+            temperature: data.main.temp,
+            humidity: data.main.humidity,
+            windspeed: data.wind.speed,
+            description: data.weather[0].description,
+          },
+          error:''
+        })
+      } else {
+        this.setState({
+          ...initialState,
+          error: data.message
+     
+        })
+      }
     }else {
       this.setState({
-        city: undefined,
-        country: undefined,
-        weather:{
-          temperature: undefined,
-          humidity: undefined,
-          windspeed: undefined,
-          description: undefined,
-        },
+        ...initialState, 
         error: 'Please enter city and country'
-   
       })
     }
    
     
   }
-
 
   render() {
     return (
