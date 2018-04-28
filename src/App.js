@@ -61,6 +61,14 @@ class App extends Component {
     
   }
 
+  reset = () => {
+    this.setState({
+      city: undefined,
+      country:undefined,
+      ...initialState
+    })
+  }
+
   render() {
     return (
       <div>
@@ -70,7 +78,7 @@ class App extends Component {
                  <div className="row">
                    <div className="col-xs-5 title-container"> <Title/> </div>
                    <div className="col-xs-7 form-container">
-                      <Form getWeather={this.getWeather}/>
+                      <Form getWeather={this.getWeather} reset={this.reset}/>
                       <Weather city={this.state.city}
                                 country={this.state.country}
                                 weather={this.state.weather}

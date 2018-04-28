@@ -1,11 +1,15 @@
 import React from 'react'
 
 export const Form = props => (
-    <div className="form"> 
+    <div> 
         <form onSubmit={props.getWeather}> 
-        <input type="text" name="city" placeholder="city..."/>
-        <input type="text" name="country" placeholder="country..."/>
+        <div>
+            <input type="text" name="city" placeholder="City..."/>
+            <input type="text" name="country" placeholder="Country..."/>
+        </div>
         <button type="submit" className="btn btn-primary"> Find Weather </button>
+        <button type="reset" onClick={props.reset} className="btn"> Reset</button>
         </form>
+        
     </div>
 )

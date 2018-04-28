@@ -30,5 +30,6 @@ export const Weather = props => (
             {
                 props.error && <p className="weather__error">{props.error}</p>
             }
+          
         </div>
      )
