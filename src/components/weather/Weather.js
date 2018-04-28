@@ -9,17 +9,17 @@ export const Weather = props => (
             }
             {
                 props.weather.temperature && <p className="weather__key"> Temperature : 
-                    <span className="weather__value"> {props.weather.temperature} </span>
+                    <span className="weather__value"> {props.weather.temperature} &#8451; </span>
                 </p> 
             }
             {
                 props.weather.humidity && <p className="weather__key"> Humidity : 
-                    <span className="weather__value"> {props.weather.humidity} </span>
+                    <span className="weather__value"> {props.weather.humidity} &#37; </span>
                 </p>
             }
             {
                 props.weather.windspeed &&  <p className="weather__key"> Wind Speed : 
-                 <span className="weather__value"> {props.weather.windspeed} </span>
+                 <span className="weather__value"> {props.weather.windspeed} Km/h</span>
                 </p>
             }
             {
