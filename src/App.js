@@ -4,7 +4,7 @@ import './App.css'
 import { Title } from './components/title/Title'
 import { Form } from './components/form/Form'
 import { Weather } from './components/weather/Weather'
-import { convertToCelcius, apiRequest } from './utils'
+import { convertToCelcius, apiRequest } from './services/AppService'
 
 
 
