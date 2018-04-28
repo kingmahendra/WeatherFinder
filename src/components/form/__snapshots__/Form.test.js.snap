@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Component should render Form 1`] = `
+<div>
+  <form>
+    <div>
+      <input
+        name="city"
+        placeholder="City..."
+        type="text"
+      />
+      <input
+        name="country"
+        placeholder="Country..."
+        type="text"
+      />
+    </div>
+    <button
+      className="btn btn-primary"
+      type="submit"
+    >
+       Find Weather 
+    </button>
+    <button
+      className="btn"
+      type="reset"
+    >
+       Reset
+    </button>
+  </form>
+</div>
+`;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import { Title } from './components/Title'
-import { Form } from './components/Form'
-import { Weather } from './components/Weather'
+import { Title } from './components/title/Title'
+import { Form } from './components/form/Form'
+import { Weather } from './components/weather/Weather'
 
 const API_KEY= 'd6d091ab1a32a6e22f178d8cbc1f5401'
 

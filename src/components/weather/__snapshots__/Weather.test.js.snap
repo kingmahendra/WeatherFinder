@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wheather Component should render city and country and weather info 1`] = `
+<div
+  className="weather__info"
+>
+  <p
+    className="weather__key"
+  >
+     Loction :
+    <span
+      className="weather__value"
+    >
+       
+      London
+       
+      UK
+        
+    </span>
+  </p>
+  <p
+    className="weather__key"
+  >
+     Temperature :
+    <span
+      className="weather__value"
+    >
+       
+      31
+       
+    </span>
+  </p>
+  <p
+    className="weather__key"
+  >
+     Humidity :
+    <span
+      className="weather__value"
+    >
+       
+      10
+       
+    </span>
+  </p>
+  <p
+    className="weather__key"
+  >
+     Wind Speed :
+    <span
+      className="weather__value"
+    >
+       
+      10
+       
+    </span>
+  </p>
+  <p
+    className="weather__key"
+  >
+     Condition :
+    <span
+      className="weather__value"
+    >
+       
+      some desc
+       
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Wheather Component should render error 1`] = `
+<div
+  className="weather__info"
+>
+  <p
+    className="weather__error"
+  >
+    City not found
+  </p>
+</div>
+`;
